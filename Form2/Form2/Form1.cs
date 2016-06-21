@@ -19,14 +19,16 @@ namespace Form2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quotesDataSet.customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.quotesDataSet.customers);
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form2 form2Form = new Form2(this);
-            form2Form.Show();
-            this.Hide();
+            //Form2 form2Form = new Form2(this);
+            //form2Form.Show();
+            //this.Hide();
         }
     }
 }
