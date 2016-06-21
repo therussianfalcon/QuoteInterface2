@@ -12,3 +12,4 @@ C:\Users\Rich\Documents\GitHub\QuoteInterface2\Form2\Form2\bin\Debug\EntityFrame
 C:\Users\Rich\Documents\GitHub\QuoteInterface2\Form2\Form2\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Rich\Documents\GitHub\QuoteInterface2\Form2\Form2\bin\Debug\EntityFramework.xml
 C:\Users\Rich\Documents\GitHub\QuoteInterface2\Form2\Form2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rich\Documents\GitHub\QuoteInterface2\Form2\Form2\obj\Debug\Form2.Interface2.resources
