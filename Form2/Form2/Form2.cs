@@ -12,15 +12,16 @@ namespace Form2
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        Form1 frm1;
+        public Form2(Form1 parent)
         {
             InitializeComponent();
+            frm1 = parent;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-   
+            frm1.Close();
         }
     }
 }

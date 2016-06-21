@@ -24,7 +24,7 @@ namespace Form2
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form2 form2Form = new Form2();
+            Form2 form2Form = new Form2(this);
             form2Form.Show();
             this.Hide();
         }
