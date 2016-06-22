@@ -19,16 +19,27 @@ namespace Form2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quotesDataSet.customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.quotesDataSet.customers);
+            // TODO: This line of code loads data into the 'customersDataSet.customers' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'quotesDataSet1.quote' table. You can move, or remove it, as needed.
+            this.quoteTableAdapter.Fill(this.quotesDataSet1.quote);
+            // TODO: This line of code loads data into the 'customersDataSet.customers' table. You can move, or remove it, as needed.
+
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Interface2 int2 = new Interface2(this);
-            int2.Show();
-            this.Hide();
+           
+        }
+
+        private void retrieveButton_Click(object sender, EventArgs e)
+        {
+            quoteMainPanel.Visible = true;
+        }
+
+        private void quoteMainReturnButton_Click(object sender, EventArgs e)
+        {
+            quoteMainPanel.Visible = false;
         }
     }
 }

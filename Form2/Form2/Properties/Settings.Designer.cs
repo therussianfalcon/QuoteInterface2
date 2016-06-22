@@ -32,5 +32,15 @@ namespace Form2.Properties {
                 return ((string)(this["quotesConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;persistsecurityinfo=True;database=customers")]
+        public string customersConnectionString {
+            get {
+                return ((string)(this["customersConnectionString"]));
+            }
+        }
     }
 }
