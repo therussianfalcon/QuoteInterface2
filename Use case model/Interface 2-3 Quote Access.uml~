@@ -62,7 +62,7 @@
 			CodeGeneration
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Jun 21 17:43:43 CDT 2016'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Jun 21 17:47:22 CDT 2016'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -85,6 +85,7 @@
             <UML:Generalization xmi.idref = '-64--88-0-102--67d39b6:15575085c63:-8000:0000000000000880'/>
             <UML:Generalization xmi.idref = '-64--88-0-102--67d39b6:15575085c63:-8000:0000000000000882'/>
             <UML:Generalization xmi.idref = '-64--88-0-102--67d39b6:15575085c63:-8000:0000000000000887'/>
+            <UML:Generalization xmi.idref = '-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B2'/>
           </UML:GeneralizableElement.generalization>
         </UML:UseCase>
         <UML:Association xmi.id = '-64--88-0-102--67d39b6:15575085c63:-8000:0000000000000868'
@@ -549,6 +550,18 @@
           </UML:Generalization.child>
           <UML:Generalization.parent>
             <UML:UseCase xmi.idref = '-64--88-0-102--67d39b6:15575085c63:-8000:0000000000000888'/>
+          </UML:Generalization.parent>
+        </UML:Generalization>
+        <UML:UseCase xmi.id = '-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B1'
+          name = 'Sanction Quote' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
+          isAbstract = 'false'/>
+        <UML:Generalization xmi.id = '-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B2'
+          isSpecification = 'false'>
+          <UML:Generalization.child>
+            <UML:UseCase xmi.idref = '-64--88-0-102--67d39b6:15575085c63:-8000:0000000000000867'/>
+          </UML:Generalization.child>
+          <UML:Generalization.parent>
+            <UML:UseCase xmi.idref = '-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B1'/>
           </UML:Generalization.parent>
         </UML:Generalization>
       </UML:Namespace.ownedElement>
@@ -2088,6 +2101,133 @@
               y="218" />
       <lineto x="786"
               y="294" />
+    </path>
+  </group>
+  <group name="Fig23"
+       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[512, 360, 114, 44]pathVisible=false;stereotypeView=0;extensionPointVisible=false"
+       href="-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B1"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <ellipse name="Fig23.0"
+      x="569"
+      y="382"
+      rx="57"
+      ry="22"
+      fill="1"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    />
+    <text name="Fig23.1"
+      x="523"
+      y="370"
+      width="92"
+      height="23"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      textcolor="black"
+      font="Dialog"
+      italic="false"
+      bold="false"
+      textsize="12"
+      justification="Center"
+    >Sanction Quote</text>
+    <group name="Fig23.2"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[523, 369, 87, 0]"
+         href="-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B1"
+         fill="0"
+         fillcolor="white"
+         stroke="0"
+         strokecolor="black"
+         visibility="0"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig23.2.0"
+        x="523"
+        y="369"
+        width="87"
+        height="0"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+    </group>
+    <rectangle name="Fig23.3"
+      x="522"
+      y="370"
+      width="11"
+      height="1"
+      fill="1"
+      fillcolor="black"
+      stroke="1"
+      strokecolor="black"
+      visibility="0"
+    />
+    <group name="Fig23.4"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[522, 370, 64, 19]"
+         href="-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B1"
+         fill="1"
+         fillcolor="white"
+         stroke="0"
+         strokecolor="black"
+         visibility="0"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig23.4.0"
+        x="522"
+        y="370"
+        width="64"
+        height="19"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        visibility="0"
+      />
+    </group>
+  </group>
+  <group name="Fig24"
+       description="org.argouml.uml.diagram.ui.FigGeneralization"
+       href="-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B2"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig1"
+      destPortFig="Fig23"
+      sourceFigNode="Fig1"
+      destFigNode="Fig23"
+      <argouml:pathitem figname="Fig24.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="-64--88-0-102--67d39b6:15575085c63:-8000:00000000000008B2"
+                        angle="270.0"
+                        offset="-10" />
+    </private>
+    <path name="Fig24.0"
+      description="org.tigris.gef.presentation.FigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="398"
+              y="224" />
+      <lineto x="547"
+              y="361" />
     </path>
   </group>
 </pgml>
