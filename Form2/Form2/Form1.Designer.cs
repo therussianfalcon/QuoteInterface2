@@ -71,6 +71,8 @@
             this.quoteDisplayRefresh = new System.Windows.Forms.Button();
             this.commentDisplay = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quoteBindingSource2)).BeginInit();
             this.quoteMainPanel.SuspendLayout();
@@ -242,6 +244,8 @@
             // 
             this.quoteRetrievePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quoteRetrievePanel.BackgroundImage")));
             this.quoteRetrievePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.quoteRetrievePanel.Controls.Add(this.checkBox2);
+            this.quoteRetrievePanel.Controls.Add(this.checkBox1);
             this.quoteRetrievePanel.Controls.Add(this.quoteDisplayRefresh);
             this.quoteRetrievePanel.Controls.Add(this.priceDetailButton);
             this.quoteRetrievePanel.Controls.Add(this.modifyQuoteButton);
@@ -449,6 +453,28 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Comment";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(382, 29);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "Unresolved";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.Color.White;
+            this.checkBox2.Location = new System.Drawing.Point(382, 52);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(80, 17);
+            this.checkBox2.TabIndex = 5;
+            this.checkBox2.Text = "Sanctioned";
+            this.checkBox2.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +553,8 @@
         private System.Windows.Forms.TextBox custNameDisplay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox commentDisplay;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 

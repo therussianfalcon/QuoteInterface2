@@ -14,7 +14,7 @@ namespace Form2
     public partial class Form1 : Form
     {
 
-        string connectionString = "Server=localhost;Database=quotes;User Id=root;Password=thekingpin;";
+        string connectionString = "Server=localhost; Database=quotes; user id=root; Password=thekingpin;";
         public Form1()
         {
             InitializeComponent();
@@ -68,24 +68,53 @@ namespace Form2
         private void retrieveQuoteButton_Click(object sender, EventArgs e)
         {
             int quoteNumber;
-            string queryString = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote WHERE QuoteID = @" + quoteIDtextbox.Text;
+            // string queryString = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote WHERE QuoteID = '"+quoteIDtextbox.Text+"';";
 
             if (quoteIDtextbox.Text != "")
             {
-                try
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    quoteNumber = Convert.ToInt32(quoteIDtextbox.Text);
-                    quoteRetrievePanel.Visible = true;
-                    quoteMainPanel.Visible = false;
-                    QuoteIDDisplay.Text = quoteNumber.ToString();
-                    //using (SqlConnection connection = new SqlConnection(connectionString))
-                    //{
-                    //    SqlCommand command = new SqlCommand(queryString, connection);
-                    //}
-                }
-                catch (System.Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    try
+                    {
+                        //get number from second panel
+                        quoteNumber = Convert.ToInt32(quoteIDtextbox.Text);
+
+                        string queryString = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote WHERE QuoteID = '" + quoteIDtextbox.Text + "';";
+
+                        ////show new panel
+                        //quoteRetrievePanel.Visible = true;
+                        //quoteMainPanel.Visible = false;
+
+                        //display quote id
+                        QuoteIDDisplay.Text = quoteNumber.ToString();
+
+                        //open MySQL connection
+                        connection.Open();
+                        SqlCommand command = new SqlCommand(queryString, connection);
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            custNameDisplay.Text = reader.GetString(2);
+                            priceDisplay.Text = reader.GetString(3);
+                            commentDisplay.Text = reader.GetString(4);
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("NO DATA");
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        //show new panel
+                        quoteRetrievePanel.Visible = true;
+                        quoteMainPanel.Visible = false;
+                    }
                 }
             }
             else
