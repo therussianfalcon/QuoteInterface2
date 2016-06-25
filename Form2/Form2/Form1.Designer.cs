@@ -57,6 +57,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.deleteQuoteButton = new System.Windows.Forms.Button();
+            this.refreshQuoteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.quoteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -142,6 +143,7 @@
             // quoteMainPanel
             // 
             this.quoteMainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quoteMainPanel.BackgroundImage")));
+            this.quoteMainPanel.Controls.Add(this.refreshQuoteButton);
             this.quoteMainPanel.Controls.Add(this.deleteQuoteButton);
             this.quoteMainPanel.Controls.Add(this.label1);
             this.quoteMainPanel.Controls.Add(this.textBox1);
@@ -262,6 +264,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(66, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -282,6 +285,16 @@
             this.deleteQuoteButton.TabIndex = 5;
             this.deleteQuoteButton.Text = "Delete";
             this.deleteQuoteButton.UseVisualStyleBackColor = true;
+            // 
+            // refreshQuoteButton
+            // 
+            this.refreshQuoteButton.Location = new System.Drawing.Point(480, 169);
+            this.refreshQuoteButton.Name = "refreshQuoteButton";
+            this.refreshQuoteButton.Size = new System.Drawing.Size(75, 23);
+            this.refreshQuoteButton.TabIndex = 6;
+            this.refreshQuoteButton.Text = "Refresh";
+            this.refreshQuoteButton.UseVisualStyleBackColor = true;
+            this.refreshQuoteButton.Click += new System.EventHandler(this.refreshQuoteButton_Click);
             // 
             // Form1
             // 
@@ -344,6 +357,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button deleteQuoteButton;
+        private System.Windows.Forms.Button refreshQuoteButton;
     }
 }
 

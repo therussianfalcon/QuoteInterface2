@@ -20,7 +20,7 @@ namespace Form2
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quotesDataSet2.quote' table. You can move, or remove it, as needed.
-            this.quoteTableAdapter1.Fill(this.quotesDataSet2.quote);
+            //this.quoteTableAdapter1.Fill(this.quotesDataSet2.quote);
             // TODO: This line of code loads data into the 'customersDataSet.customers' table. You can move, or remove it, as needed.
 
 
@@ -34,6 +34,7 @@ namespace Form2
         private void retrieveButton_Click(object sender, EventArgs e)
         {
             quoteMainPanel.Visible = true;
+            //this.quoteTableAdapter1.Fill(this.quotesDataSet2.quote);
         }
 
         private void quoteMainReturnButton_Click(object sender, EventArgs e)
@@ -54,6 +55,11 @@ namespace Form2
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void refreshQuoteButton_Click(object sender, EventArgs e)
+        {
+            this.quoteTableAdapter1.Fill(this.quotesDataSet2.quote);
         }
     }
 }
