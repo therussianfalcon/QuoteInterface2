@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Form2
 {
     public partial class Form1 : Form
     {
+
+        string connectionString = "Server=localhost;Database=quotes;User Id=root;Password=thekingpin;";
         public Form1()
         {
             InitializeComponent();
@@ -60,6 +63,42 @@ namespace Form2
         private void refreshQuoteButton_Click(object sender, EventArgs e)
         {
             this.quoteTableAdapter1.Fill(this.quotesDataSet2.quote);
+        }
+
+        private void retrieveQuoteButton_Click(object sender, EventArgs e)
+        {
+            int quoteNumber;
+            string queryString = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote WHERE QuoteID = @" + quoteIDtextbox.Text;
+
+            if (quoteIDtextbox.Text != "")
+            {
+                try
+                {
+                    quoteNumber = Convert.ToInt32(quoteIDtextbox.Text);
+                    quoteRetrievePanel.Visible = true;
+                    quoteMainPanel.Visible = false;
+                    QuoteIDDisplay.Text = quoteNumber.ToString();
+                    //using (SqlConnection connection = new SqlConnection(connectionString))
+                    //{
+                    //    SqlCommand command = new SqlCommand(queryString, connection);
+                    //}
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+
+            }
+
+        }
+
+        private void quoteRetrievalReturnButton_Click(object sender, EventArgs e)
+        {
+            quoteMainPanel.Visible = true;
+            quoteRetrievePanel.Visible = false;
         }
     }
 }
