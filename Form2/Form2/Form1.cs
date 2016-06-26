@@ -14,7 +14,7 @@ namespace Form2
     public partial class Form1 : Form
     {
 
-        string connectionString = "Server=localhost; Database=quotes; user id=root; Password=thekingpin;";
+        string connectionString = "Server=localhost; Database=quotes; user id=root; Password=root;";
         public Form1()
         {
             InitializeComponent();
