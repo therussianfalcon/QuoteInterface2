@@ -34,6 +34,10 @@
             this.purchButton = new System.Windows.Forms.Button();
             this.quoteMainReturnButton = new System.Windows.Forms.Button();
             this.quoteMainPanel = new System.Windows.Forms.Panel();
+            this.searchToolStrip = new System.Windows.Forms.ToolStrip();
+            this.quoteIDToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.quoteIDToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.searchToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.quoteIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,16 +67,12 @@
             this.custNameDisplay = new System.Windows.Forms.TextBox();
             this.QuoteIDDisplay = new System.Windows.Forms.TextBox();
             this.quotesTableAdapter = new Form2.sql5125420DataSet1TableAdapters.quotesTableAdapter();
-            this.searchToolStrip = new System.Windows.Forms.ToolStrip();
-            this.quoteIDToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.quoteIDToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.searchToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.quoteMainPanel.SuspendLayout();
+            this.searchToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sql5125420DataSet1)).BeginInit();
             this.quoteRetrievePanel.SuspendLayout();
-            this.searchToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // retrieveButton
@@ -124,11 +124,43 @@
             this.quoteMainPanel.TabIndex = 1;
             this.quoteMainPanel.Visible = false;
             // 
+            // searchToolStrip
+            // 
+            this.searchToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quoteIDToolStripLabel,
+            this.quoteIDToolStripTextBox,
+            this.searchToolStripButton});
+            this.searchToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.searchToolStrip.Name = "searchToolStrip";
+            this.searchToolStrip.Size = new System.Drawing.Size(575, 25);
+            this.searchToolStrip.TabIndex = 8;
+            this.searchToolStrip.Text = "searchToolStrip";
+            // 
+            // quoteIDToolStripLabel
+            // 
+            this.quoteIDToolStripLabel.Name = "quoteIDToolStripLabel";
+            this.quoteIDToolStripLabel.Size = new System.Drawing.Size(54, 22);
+            this.quoteIDToolStripLabel.Text = "QuoteID:";
+            // 
+            // quoteIDToolStripTextBox
+            // 
+            this.quoteIDToolStripTextBox.Name = "quoteIDToolStripTextBox";
+            this.quoteIDToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // searchToolStripButton
+            // 
+            this.searchToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.searchToolStripButton.Name = "searchToolStripButton";
+            this.searchToolStripButton.Size = new System.Drawing.Size(46, 22);
+            this.searchToolStripButton.Text = "Search";
+            this.searchToolStripButton.Click += new System.EventHandler(this.searchToolStripButton_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.quoteIDDataGridViewTextBoxColumn,
@@ -409,37 +441,6 @@
             // 
             this.quotesTableAdapter.ClearBeforeFill = true;
             // 
-            // searchToolStrip
-            // 
-            this.searchToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quoteIDToolStripLabel,
-            this.quoteIDToolStripTextBox,
-            this.searchToolStripButton});
-            this.searchToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.searchToolStrip.Name = "searchToolStrip";
-            this.searchToolStrip.Size = new System.Drawing.Size(575, 25);
-            this.searchToolStrip.TabIndex = 8;
-            this.searchToolStrip.Text = "searchToolStrip";
-            // 
-            // quoteIDToolStripLabel
-            // 
-            this.quoteIDToolStripLabel.Name = "quoteIDToolStripLabel";
-            this.quoteIDToolStripLabel.Size = new System.Drawing.Size(54, 22);
-            this.quoteIDToolStripLabel.Text = "QuoteID:";
-            // 
-            // quoteIDToolStripTextBox
-            // 
-            this.quoteIDToolStripTextBox.Name = "quoteIDToolStripTextBox";
-            this.quoteIDToolStripTextBox.Size = new System.Drawing.Size(100, 25);
-            // 
-            // searchToolStripButton
-            // 
-            this.searchToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.searchToolStripButton.Name = "searchToolStripButton";
-            this.searchToolStripButton.Size = new System.Drawing.Size(46, 22);
-            this.searchToolStripButton.Text = "Search";
-            this.searchToolStripButton.Click += new System.EventHandler(this.searchToolStripButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,13 +461,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.quoteMainPanel.ResumeLayout(false);
             this.quoteMainPanel.PerformLayout();
+            this.searchToolStrip.ResumeLayout(false);
+            this.searchToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sql5125420DataSet1)).EndInit();
             this.quoteRetrievePanel.ResumeLayout(false);
             this.quoteRetrievePanel.PerformLayout();
-            this.searchToolStrip.ResumeLayout(false);
-            this.searchToolStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
