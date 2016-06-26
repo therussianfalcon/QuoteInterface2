@@ -14,7 +14,6 @@ namespace Form2
     public partial class Form1 : Form
     {
 
-        string connectionString = "server=sql5.freemysqlhosting.net; database=sql5125420; uid=sql5125420; pwd=CuPC68fUR7;";
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +21,7 @@ namespace Form2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sql5125420DataSet1.quotes' table. You can move, or remove it, as needed.
 
             // TODO: This line of code loads data into the 'sql5125420DataSet.quotes' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'quotesDataSet.quote' table. You can move, or remove it, as needed.       
@@ -41,7 +41,14 @@ namespace Form2
         private void retrieveButton_Click(object sender, EventArgs e)
         {
             quoteMainPanel.Visible = true;
-            //this.quoteTableAdapter1.Fill(this.quotesDataSet2.quote);
+            try
+            {
+                this.quotesTableAdapter.Fill(this.sql5125420DataSet1.quotes);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection!");
+            }
         }
 
         private void quoteMainReturnButton_Click(object sender, EventArgs e)
@@ -54,11 +61,11 @@ namespace Form2
         {
             try
             {
-                this.quotesTableAdapter.Fill(this.sql5125420DataSet.quotes);
+                this.quotesTableAdapter.Fill(this.sql5125420DataSet1.quotes);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Can not open connection! ");
+                MessageBox.Show("Can not open connection!");
             }
         }
 
@@ -95,6 +102,17 @@ namespace Form2
             textChangeEvent(deleteQuoteButton, quoteIDtextbox);
         }
 
+        private void searchToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.quotesTableAdapter.Search(this.sql5125420DataSet1.quotes, ((int)(System.Convert.ChangeType(quoteIDToolStripTextBox.Text, typeof(int)))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
+        }
     }
 }

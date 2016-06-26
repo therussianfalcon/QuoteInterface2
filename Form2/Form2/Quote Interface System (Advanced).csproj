@@ -91,10 +91,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>quotesDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="sql5125420DataSet.Designer.cs">
+    <Compile Include="sql5125420DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>sql5125420DataSet.xsd</DependentUpon>
+      <DependentUpon>sql5125420DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="sqlLoad.cs">
       <SubType>Form</SubType>
@@ -133,16 +133,16 @@
     <None Include="quotesDataSet.xss">
       <DependentUpon>quotesDataSet.xsd</DependentUpon>
     </None>
-    <None Include="sql5125420DataSet.xsc">
-      <DependentUpon>sql5125420DataSet.xsd</DependentUpon>
+    <None Include="sql5125420DataSet1.xsc">
+      <DependentUpon>sql5125420DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="sql5125420DataSet.xsd">
+    <None Include="sql5125420DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>sql5125420DataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>sql5125420DataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="sql5125420DataSet.xss">
-      <DependentUpon>sql5125420DataSet.xsd</DependentUpon>
+    <None Include="sql5125420DataSet1.xss">
+      <DependentUpon>sql5125420DataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

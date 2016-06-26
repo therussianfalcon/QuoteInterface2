@@ -63,5 +63,16 @@ namespace Form2.Properties {
                 return ((string)(this["testconnect"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=sql5.freemysqlhosting.net;user id=sql5125420;password=CuPC68fUR7;persistse" +
+            "curityinfo=True;database=sql5125420")]
+        public string sqlconnect {
+            get {
+                return ((string)(this["sqlconnect"]));
+            }
+        }
     }
 }

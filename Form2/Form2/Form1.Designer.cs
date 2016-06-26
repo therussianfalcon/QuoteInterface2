@@ -34,6 +34,14 @@
             this.purchButton = new System.Windows.Forms.Button();
             this.quoteMainReturnButton = new System.Windows.Forms.Button();
             this.quoteMainPanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.quoteIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quoteStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quotesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sql5125420DataSet1 = new Form2.sql5125420DataSet1();
             this.refreshQuoteButton = new System.Windows.Forms.Button();
             this.deleteQuoteButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,27 +62,17 @@
             this.priceDisplay = new System.Windows.Forms.TextBox();
             this.custNameDisplay = new System.Windows.Forms.TextBox();
             this.QuoteIDDisplay = new System.Windows.Forms.TextBox();
-            this.quoteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quotesDataSet = new Form2.quotesDataSet();
-            this.quoteTableAdapter = new Form2.quotesDataSetTableAdapters.quoteTableAdapter();
-            this.sql5125420DataSet = new Form2.sql5125420DataSet();
-            this.sql5125420DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.quotesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quotesTableAdapter = new Form2.sql5125420DataSetTableAdapters.quotesTableAdapter();
-            this.quoteIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quoteStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quotesTableAdapter = new Form2.sql5125420DataSet1TableAdapters.quotesTableAdapter();
+            this.searchToolStrip = new System.Windows.Forms.ToolStrip();
+            this.quoteIDToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.quoteIDToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.searchToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.quoteMainPanel.SuspendLayout();
-            this.quoteRetrievePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quoteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quotesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sql5125420DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sql5125420DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sql5125420DataSet1)).BeginInit();
+            this.quoteRetrievePanel.SuspendLayout();
+            this.searchToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // retrieveButton
@@ -124,6 +122,70 @@
             this.quoteMainPanel.Size = new System.Drawing.Size(575, 407);
             this.quoteMainPanel.TabIndex = 1;
             this.quoteMainPanel.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.quoteIDDataGridViewTextBoxColumn,
+            this.customerNameDataGridViewTextBoxColumn,
+            this.totalPriceDataGridViewTextBoxColumn,
+            this.commentDataGridViewTextBoxColumn,
+            this.quoteStatusDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.quotesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 29);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(543, 134);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // quoteIDDataGridViewTextBoxColumn
+            // 
+            this.quoteIDDataGridViewTextBoxColumn.DataPropertyName = "QuoteID";
+            this.quoteIDDataGridViewTextBoxColumn.HeaderText = "QuoteID";
+            this.quoteIDDataGridViewTextBoxColumn.Name = "quoteIDDataGridViewTextBoxColumn";
+            this.quoteIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerNameDataGridViewTextBoxColumn
+            // 
+            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
+            this.customerNameDataGridViewTextBoxColumn.HeaderText = "CustomerName";
+            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalPriceDataGridViewTextBoxColumn
+            // 
+            this.totalPriceDataGridViewTextBoxColumn.DataPropertyName = "TotalPrice";
+            this.totalPriceDataGridViewTextBoxColumn.HeaderText = "TotalPrice";
+            this.totalPriceDataGridViewTextBoxColumn.Name = "totalPriceDataGridViewTextBoxColumn";
+            this.totalPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "Comment";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quoteStatusDataGridViewTextBoxColumn
+            // 
+            this.quoteStatusDataGridViewTextBoxColumn.DataPropertyName = "QuoteStatus";
+            this.quoteStatusDataGridViewTextBoxColumn.HeaderText = "QuoteStatus";
+            this.quoteStatusDataGridViewTextBoxColumn.Name = "quoteStatusDataGridViewTextBoxColumn";
+            this.quoteStatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quotesBindingSource
+            // 
+            this.quotesBindingSource.DataMember = "quotes";
+            this.quotesBindingSource.DataSource = this.sql5125420DataSet1;
+            // 
+            // sql5125420DataSet1
+            // 
+            this.sql5125420DataSet1.DataSetName = "sql5125420DataSet1";
+            this.sql5125420DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // refreshQuoteButton
             // 
@@ -340,84 +402,40 @@
             this.QuoteIDDisplay.TabIndex = 0;
             this.QuoteIDDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // quoteBindingSource
-            // 
-            this.quoteBindingSource.DataMember = "quote";
-            this.quoteBindingSource.DataSource = this.quotesDataSet;
-            // 
-            // quotesDataSet
-            // 
-            this.quotesDataSet.DataSetName = "quotesDataSet";
-            this.quotesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // quoteTableAdapter
-            // 
-            this.quoteTableAdapter.ClearBeforeFill = true;
-            // 
-            // sql5125420DataSet
-            // 
-            this.sql5125420DataSet.DataSetName = "sql5125420DataSet";
-            this.sql5125420DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sql5125420DataSetBindingSource
-            // 
-            this.sql5125420DataSetBindingSource.DataSource = this.sql5125420DataSet;
-            this.sql5125420DataSetBindingSource.Position = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.quoteIDDataGridViewTextBoxColumn,
-            this.customerNameDataGridViewTextBoxColumn,
-            this.totalPriceDataGridViewTextBoxColumn,
-            this.commentDataGridViewTextBoxColumn,
-            this.quoteStatusDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.quotesBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 29);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 126);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // quotesBindingSource
-            // 
-            this.quotesBindingSource.DataMember = "quotes";
-            this.quotesBindingSource.DataSource = this.sql5125420DataSetBindingSource;
-            // 
             // quotesTableAdapter
             // 
             this.quotesTableAdapter.ClearBeforeFill = true;
             // 
-            // quoteIDDataGridViewTextBoxColumn
+            // searchToolStrip
             // 
-            this.quoteIDDataGridViewTextBoxColumn.DataPropertyName = "QuoteID";
-            this.quoteIDDataGridViewTextBoxColumn.HeaderText = "QuoteID";
-            this.quoteIDDataGridViewTextBoxColumn.Name = "quoteIDDataGridViewTextBoxColumn";
+            this.searchToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quoteIDToolStripLabel,
+            this.quoteIDToolStripTextBox,
+            this.searchToolStripButton});
+            this.searchToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.searchToolStrip.Name = "searchToolStrip";
+            this.searchToolStrip.Size = new System.Drawing.Size(575, 25);
+            this.searchToolStrip.TabIndex = 8;
+            this.searchToolStrip.Text = "searchToolStrip";
             // 
-            // customerNameDataGridViewTextBoxColumn
+            // quoteIDToolStripLabel
             // 
-            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
-            this.customerNameDataGridViewTextBoxColumn.HeaderText = "CustomerName";
-            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            this.quoteIDToolStripLabel.Name = "quoteIDToolStripLabel";
+            this.quoteIDToolStripLabel.Size = new System.Drawing.Size(54, 22);
+            this.quoteIDToolStripLabel.Text = "QuoteID:";
             // 
-            // totalPriceDataGridViewTextBoxColumn
+            // quoteIDToolStripTextBox
             // 
-            this.totalPriceDataGridViewTextBoxColumn.DataPropertyName = "TotalPrice";
-            this.totalPriceDataGridViewTextBoxColumn.HeaderText = "TotalPrice";
-            this.totalPriceDataGridViewTextBoxColumn.Name = "totalPriceDataGridViewTextBoxColumn";
+            this.quoteIDToolStripTextBox.Name = "quoteIDToolStripTextBox";
+            this.quoteIDToolStripTextBox.Size = new System.Drawing.Size(100, 25);
             // 
-            // commentDataGridViewTextBoxColumn
+            // searchToolStripButton
             // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "Comment";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            // 
-            // quoteStatusDataGridViewTextBoxColumn
-            // 
-            this.quoteStatusDataGridViewTextBoxColumn.DataPropertyName = "QuoteStatus";
-            this.quoteStatusDataGridViewTextBoxColumn.HeaderText = "QuoteStatus";
-            this.quoteStatusDataGridViewTextBoxColumn.Name = "quoteStatusDataGridViewTextBoxColumn";
+            this.searchToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.searchToolStripButton.Name = "searchToolStripButton";
+            this.searchToolStripButton.Size = new System.Drawing.Size(46, 22);
+            this.searchToolStripButton.Text = "Search";
+            this.searchToolStripButton.Click += new System.EventHandler(this.searchToolStripButton_Click);
             // 
             // Form1
             // 
@@ -427,6 +445,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(575, 407);
+            this.Controls.Add(this.searchToolStrip);
             this.Controls.Add(this.quoteMainPanel);
             this.Controls.Add(this.quoteRetrievePanel);
             this.Controls.Add(this.retrieveButton);
@@ -439,15 +458,15 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.quoteMainPanel.ResumeLayout(false);
             this.quoteMainPanel.PerformLayout();
-            this.quoteRetrievePanel.ResumeLayout(false);
-            this.quoteRetrievePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quoteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quotesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sql5125420DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sql5125420DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sql5125420DataSet1)).EndInit();
+            this.quoteRetrievePanel.ResumeLayout(false);
+            this.quoteRetrievePanel.PerformLayout();
+            this.searchToolStrip.ResumeLayout(false);
+            this.searchToolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -476,19 +495,19 @@
         private System.Windows.Forms.TextBox commentDisplay;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private quotesDataSet quotesDataSet;
-        private System.Windows.Forms.BindingSource quoteBindingSource;
-        private quotesDataSetTableAdapters.quoteTableAdapter quoteTableAdapter;
-        private sql5125420DataSet sql5125420DataSet;
-        private System.Windows.Forms.BindingSource sql5125420DataSetBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private sql5125420DataSet1 sql5125420DataSet1;
         private System.Windows.Forms.BindingSource quotesBindingSource;
-        private sql5125420DataSetTableAdapters.quotesTableAdapter quotesTableAdapter;
+        private sql5125420DataSet1TableAdapters.quotesTableAdapter quotesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn quoteIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quoteStatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStrip searchToolStrip;
+        private System.Windows.Forms.ToolStripLabel quoteIDToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox quoteIDToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton searchToolStripButton;
     }
 }
 
