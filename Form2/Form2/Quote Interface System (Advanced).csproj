@@ -78,16 +78,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="customersDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>customersDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,15 +91,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>quotesDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="quotesDataSet1.Designer.cs">
+    <Compile Include="sql5125420DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>quotesDataSet1.xsd</DependentUpon>
+      <DependentUpon>sql5125420DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="quotesDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>quotesDataSet2.xsd</DependentUpon>
+    <Compile Include="sqlLoad.cs">
+      <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -124,27 +112,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="customersDataSet.xsc">
-      <DependentUpon>customersDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="customersDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>customersDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="customersDataSet.xss">
-      <DependentUpon>customersDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -166,27 +133,16 @@
     <None Include="quotesDataSet.xss">
       <DependentUpon>quotesDataSet.xsd</DependentUpon>
     </None>
-    <None Include="quotesDataSet1.xsc">
-      <DependentUpon>quotesDataSet1.xsd</DependentUpon>
+    <None Include="sql5125420DataSet.xsc">
+      <DependentUpon>sql5125420DataSet.xsd</DependentUpon>
     </None>
-    <None Include="quotesDataSet1.xsd">
+    <None Include="sql5125420DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>quotesDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>sql5125420DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="quotesDataSet1.xss">
-      <DependentUpon>quotesDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="quotesDataSet2.xsc">
-      <DependentUpon>quotesDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="quotesDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>quotesDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="quotesDataSet2.xss">
-      <DependentUpon>quotesDataSet2.xsd</DependentUpon>
+    <None Include="sql5125420DataSet.xss">
+      <DependentUpon>sql5125420DataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

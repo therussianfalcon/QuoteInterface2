@@ -20,17 +20,17 @@ namespace Form2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("quotesDataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("sql5125420DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class quotesDataSet2 : global::System.Data.DataSet {
+    public partial class sql5125420DataSet : global::System.Data.DataSet {
         
-        private quoteDataTable tablequote;
+        private quotesDataTable tablequotes;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public quotesDataSet2() {
+        public sql5125420DataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Form2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected quotesDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected sql5125420DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Form2 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["quote"] != null)) {
-                    base.Tables.Add(new quoteDataTable(ds.Tables["quote"]));
+                if ((ds.Tables["quotes"] != null)) {
+                    base.Tables.Add(new quotesDataTable(ds.Tables["quotes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Form2 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public quoteDataTable quote {
+        public quotesDataTable quotes {
             get {
-                return this.tablequote;
+                return this.tablequotes;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Form2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            quotesDataSet2 cln = ((quotesDataSet2)(base.Clone()));
+            sql5125420DataSet cln = ((sql5125420DataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Form2 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["quote"] != null)) {
-                    base.Tables.Add(new quoteDataTable(ds.Tables["quote"]));
+                if ((ds.Tables["quotes"] != null)) {
+                    base.Tables.Add(new quotesDataTable(ds.Tables["quotes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Form2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablequote = ((quoteDataTable)(base.Tables["quote"]));
+            this.tablequotes = ((quotesDataTable)(base.Tables["quotes"]));
             if ((initTable == true)) {
-                if ((this.tablequote != null)) {
-                    this.tablequote.InitVars();
+                if ((this.tablequotes != null)) {
+                    this.tablequotes.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Form2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "quotesDataSet2";
+            this.DataSetName = "sql5125420DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/quotesDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/sql5125420DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablequote = new quoteDataTable();
-            base.Tables.Add(this.tablequote);
+            this.tablequotes = new quotesDataTable();
+            base.Tables.Add(this.tablequotes);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializequote() {
+        private bool ShouldSerializequotes() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Form2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            quotesDataSet2 ds = new quotesDataSet2();
+            sql5125420DataSet ds = new sql5125420DataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace Form2 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void quoteRowChangeEventHandler(object sender, quoteRowChangeEvent e);
+        public delegate void quotesRowChangeEventHandler(object sender, quotesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class quoteDataTable : global::System.Data.TypedTableBase<quoteRow> {
+        public partial class quotesDataTable : global::System.Data.TypedTableBase<quotesRow> {
             
             private global::System.Data.DataColumn columnQuoteID;
             
@@ -291,8 +291,8 @@ namespace Form2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public quoteDataTable() {
-                this.TableName = "quote";
+            public quotesDataTable() {
+                this.TableName = "quotes";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace Form2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal quoteDataTable(global::System.Data.DataTable table) {
+            internal quotesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +317,7 @@ namespace Form2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected quoteDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected quotesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -373,56 +373,56 @@ namespace Form2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public quoteRow this[int index] {
+            public quotesRow this[int index] {
                 get {
-                    return ((quoteRow)(this.Rows[index]));
+                    return ((quotesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event quoteRowChangeEventHandler quoteRowChanging;
+            public event quotesRowChangeEventHandler quotesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event quoteRowChangeEventHandler quoteRowChanged;
+            public event quotesRowChangeEventHandler quotesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event quoteRowChangeEventHandler quoteRowDeleting;
+            public event quotesRowChangeEventHandler quotesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event quoteRowChangeEventHandler quoteRowDeleted;
+            public event quotesRowChangeEventHandler quotesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddquoteRow(quoteRow row) {
+            public void AddquotesRow(quotesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public quoteRow AddquoteRow(int QuoteID, string CustomerName, double TotalPrice, string Comment, ulong QuoteStatus) {
-                quoteRow rowquoteRow = ((quoteRow)(this.NewRow()));
+            public quotesRow AddquotesRow(int QuoteID, string CustomerName, double TotalPrice, string Comment, int QuoteStatus) {
+                quotesRow rowquotesRow = ((quotesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         QuoteID,
                         CustomerName,
                         TotalPrice,
                         Comment,
                         QuoteStatus};
-                rowquoteRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowquoteRow);
-                return rowquoteRow;
+                rowquotesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowquotesRow);
+                return rowquotesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public quoteRow FindByQuoteID(int QuoteID) {
-                return ((quoteRow)(this.Rows.Find(new object[] {
+            public quotesRow FindByQuoteID(int QuoteID) {
+                return ((quotesRow)(this.Rows.Find(new object[] {
                             QuoteID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                quoteDataTable cln = ((quoteDataTable)(base.Clone()));
+                quotesDataTable cln = ((quotesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,7 +430,7 @@ namespace Form2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new quoteDataTable();
+                return new quotesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -454,39 +454,39 @@ namespace Form2 {
                 base.Columns.Add(this.columnTotalPrice);
                 this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComment);
-                this.columnQuoteStatus = new global::System.Data.DataColumn("QuoteStatus", typeof(ulong), null, global::System.Data.MappingType.Element);
+                this.columnQuoteStatus = new global::System.Data.DataColumn("QuoteStatus", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuoteStatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnQuoteID}, true));
                 this.columnQuoteID.AllowDBNull = false;
                 this.columnQuoteID.Unique = true;
-                this.columnCustomerName.MaxLength = 5592405;
+                this.columnCustomerName.MaxLength = 16777215;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public quoteRow NewquoteRow() {
-                return ((quoteRow)(this.NewRow()));
+            public quotesRow NewquotesRow() {
+                return ((quotesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new quoteRow(builder);
+                return new quotesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(quoteRow);
+                return typeof(quotesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.quoteRowChanged != null)) {
-                    this.quoteRowChanged(this, new quoteRowChangeEvent(((quoteRow)(e.Row)), e.Action));
+                if ((this.quotesRowChanged != null)) {
+                    this.quotesRowChanged(this, new quotesRowChangeEvent(((quotesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -494,8 +494,8 @@ namespace Form2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.quoteRowChanging != null)) {
-                    this.quoteRowChanging(this, new quoteRowChangeEvent(((quoteRow)(e.Row)), e.Action));
+                if ((this.quotesRowChanging != null)) {
+                    this.quotesRowChanging(this, new quotesRowChangeEvent(((quotesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -503,8 +503,8 @@ namespace Form2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.quoteRowDeleted != null)) {
-                    this.quoteRowDeleted(this, new quoteRowChangeEvent(((quoteRow)(e.Row)), e.Action));
+                if ((this.quotesRowDeleted != null)) {
+                    this.quotesRowDeleted(this, new quotesRowChangeEvent(((quotesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -512,14 +512,14 @@ namespace Form2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.quoteRowDeleting != null)) {
-                    this.quoteRowDeleting(this, new quoteRowChangeEvent(((quoteRow)(e.Row)), e.Action));
+                if ((this.quotesRowDeleting != null)) {
+                    this.quotesRowDeleting(this, new quotesRowChangeEvent(((quotesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovequoteRow(quoteRow row) {
+            public void RemovequotesRow(quotesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -528,7 +528,7 @@ namespace Form2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                quotesDataSet2 ds = new quotesDataSet2();
+                sql5125420DataSet ds = new sql5125420DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -546,7 +546,7 @@ namespace Form2 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "quoteDataTable";
+                attribute2.FixedValue = "quotesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -590,25 +590,25 @@ namespace Form2 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class quoteRow : global::System.Data.DataRow {
+        public partial class quotesRow : global::System.Data.DataRow {
             
-            private quoteDataTable tablequote;
+            private quotesDataTable tablequotes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal quoteRow(global::System.Data.DataRowBuilder rb) : 
+            internal quotesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablequote = ((quoteDataTable)(this.Table));
+                this.tablequotes = ((quotesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int QuoteID {
                 get {
-                    return ((int)(this[this.tablequote.QuoteIDColumn]));
+                    return ((int)(this[this.tablequotes.QuoteIDColumn]));
                 }
                 set {
-                    this[this.tablequote.QuoteIDColumn] = value;
+                    this[this.tablequotes.QuoteIDColumn] = value;
                 }
             }
             
@@ -617,14 +617,14 @@ namespace Form2 {
             public string CustomerName {
                 get {
                     try {
-                        return ((string)(this[this.tablequote.CustomerNameColumn]));
+                        return ((string)(this[this.tablequotes.CustomerNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerName\' in table \'quote\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerName\' in table \'quotes\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablequote.CustomerNameColumn] = value;
+                    this[this.tablequotes.CustomerNameColumn] = value;
                 }
             }
             
@@ -633,14 +633,14 @@ namespace Form2 {
             public double TotalPrice {
                 get {
                     try {
-                        return ((double)(this[this.tablequote.TotalPriceColumn]));
+                        return ((double)(this[this.tablequotes.TotalPriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalPrice\' in table \'quote\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalPrice\' in table \'quotes\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablequote.TotalPriceColumn] = value;
+                    this[this.tablequotes.TotalPriceColumn] = value;
                 }
             }
             
@@ -649,79 +649,79 @@ namespace Form2 {
             public string Comment {
                 get {
                     try {
-                        return ((string)(this[this.tablequote.CommentColumn]));
+                        return ((string)(this[this.tablequotes.CommentColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Comment\' in table \'quote\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Comment\' in table \'quotes\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablequote.CommentColumn] = value;
+                    this[this.tablequotes.CommentColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ulong QuoteStatus {
+            public int QuoteStatus {
                 get {
                     try {
-                        return ((ulong)(this[this.tablequote.QuoteStatusColumn]));
+                        return ((int)(this[this.tablequotes.QuoteStatusColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'QuoteStatus\' in table \'quote\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'QuoteStatus\' in table \'quotes\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablequote.QuoteStatusColumn] = value;
+                    this[this.tablequotes.QuoteStatusColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCustomerNameNull() {
-                return this.IsNull(this.tablequote.CustomerNameColumn);
+                return this.IsNull(this.tablequotes.CustomerNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCustomerNameNull() {
-                this[this.tablequote.CustomerNameColumn] = global::System.Convert.DBNull;
+                this[this.tablequotes.CustomerNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTotalPriceNull() {
-                return this.IsNull(this.tablequote.TotalPriceColumn);
+                return this.IsNull(this.tablequotes.TotalPriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTotalPriceNull() {
-                this[this.tablequote.TotalPriceColumn] = global::System.Convert.DBNull;
+                this[this.tablequotes.TotalPriceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCommentNull() {
-                return this.IsNull(this.tablequote.CommentColumn);
+                return this.IsNull(this.tablequotes.CommentColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCommentNull() {
-                this[this.tablequote.CommentColumn] = global::System.Convert.DBNull;
+                this[this.tablequotes.CommentColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsQuoteStatusNull() {
-                return this.IsNull(this.tablequote.QuoteStatusColumn);
+                return this.IsNull(this.tablequotes.QuoteStatusColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetQuoteStatusNull() {
-                this[this.tablequote.QuoteStatusColumn] = global::System.Convert.DBNull;
+                this[this.tablequotes.QuoteStatusColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -729,22 +729,22 @@ namespace Form2 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class quoteRowChangeEvent : global::System.EventArgs {
+        public class quotesRowChangeEvent : global::System.EventArgs {
             
-            private quoteRow eventRow;
+            private quotesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public quoteRowChangeEvent(quoteRow row, global::System.Data.DataRowAction action) {
+            public quotesRowChangeEvent(quotesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public quoteRow Row {
+            public quotesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -760,7 +760,7 @@ namespace Form2 {
         }
     }
 }
-namespace Form2.quotesDataSet2TableAdapters {
+namespace Form2.sql5125420DataSetTableAdapters {
     
     
     /// <summary>
@@ -772,7 +772,7 @@ namespace Form2.quotesDataSet2TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class quoteTableAdapter : global::System.ComponentModel.Component {
+    public partial class quotesTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -786,7 +786,7 @@ namespace Form2.quotesDataSet2TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public quoteTableAdapter() {
+        public quotesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -883,7 +883,7 @@ namespace Form2.quotesDataSet2TableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "quote";
+            tableMapping.DataSetTable = "quotes";
             tableMapping.ColumnMappings.Add("QuoteID", "QuoteID");
             tableMapping.ColumnMappings.Add("CustomerName", "CustomerName");
             tableMapping.ColumnMappings.Add("TotalPrice", "TotalPrice");
@@ -892,9 +892,9 @@ namespace Form2.quotesDataSet2TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `quote` WHERE ((`QuoteID` = @p1) AND ((@p2 = 1 AND `TotalPrice` IS NU" +
-                "LL) OR (`TotalPrice` = @p3)) AND ((@p4 = 1 AND `Comment` IS NULL) OR (`Comment` " +
-                "= @p5)) AND ((@p6 = 1 AND `QuoteStatus` IS NULL) OR (`QuoteStatus` = @p7)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `quotes` WHERE ((`QuoteID` = @p1) AND ((@p2 = 1 AND `TotalPrice` IS N" +
+                "ULL) OR (`TotalPrice` = @p3)) AND ((@p4 = 1 AND `Comment` IS NULL) OR (`Comment`" +
+                " = @p5)) AND ((@p6 = 1 AND `QuoteStatus` IS NULL) OR (`QuoteStatus` = @p7)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -948,16 +948,16 @@ namespace Form2.quotesDataSet2TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p7";
-            param.DbType = global::System.Data.DbType.UInt64;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Bit;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "QuoteStatus";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `quote` (`QuoteID`, `CustomerName`, `TotalPrice`, `Comment`, `QuoteSt" +
-                "atus`) VALUES (@p1, @p2, @p3, @p4, @p5)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `quotes` (`QuoteID`, `CustomerName`, `TotalPrice`, `Comment`, `QuoteS" +
+                "tatus`) VALUES (@p1, @p2, @p3, @p4, @p5)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -987,14 +987,14 @@ namespace Form2.quotesDataSet2TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
-            param.DbType = global::System.Data.DbType.UInt64;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Bit;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "QuoteStatus";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `quote` SET `QuoteID` = @p1, `CustomerName` = @p2, `TotalPrice` = @p3, `Comment` = @p4, `QuoteStatus` = @p5 WHERE ((`QuoteID` = @p6) AND ((@p7 = 1 AND `TotalPrice` IS NULL) OR (`TotalPrice` = @p8)) AND ((@p9 = 1 AND `Comment` IS NULL) OR (`Comment` = @p10)) AND ((@p11 = 1 AND `QuoteStatus` IS NULL) OR (`QuoteStatus` = @p12)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `quotes` SET `QuoteID` = @p1, `CustomerName` = @p2, `TotalPrice` = @p3, `Comment` = @p4, `QuoteStatus` = @p5 WHERE ((`QuoteID` = @p6) AND ((@p7 = 1 AND `TotalPrice` IS NULL) OR (`TotalPrice` = @p8)) AND ((@p9 = 1 AND `Comment` IS NULL) OR (`Comment` = @p10)) AND ((@p11 = 1 AND `QuoteStatus` IS NULL) OR (`QuoteStatus` = @p12)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -1024,8 +1024,8 @@ namespace Form2.quotesDataSet2TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
-            param.DbType = global::System.Data.DbType.UInt64;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Bit;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "QuoteStatus";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -1081,8 +1081,8 @@ namespace Form2.quotesDataSet2TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p12";
-            param.DbType = global::System.Data.DbType.UInt64;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Bit;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "QuoteStatus";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -1093,61 +1093,25 @@ namespace Form2.quotesDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::Form2.Properties.Settings.Default.quotesConnectionString;
+            this._connection.ConnectionString = global::Form2.Properties.Settings.Default.testconnect;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[4];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote";
+            this._commandCollection[0].CommandText = "SELECT `QuoteID`, `CustomerName`, `TotalPrice`, `Comment`, `QuoteStatus` FROM `qu" +
+                "otes`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote\r\nWHERE " +
-                "QuoteID = @QuoteID";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@QuoteID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "QuoteID";
-            this._commandCollection[1].Parameters.Add(param);
-            this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote WHERE (" +
-                "CustomerName = @CustomerName)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@CustomerName";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.MediumText;
-            param.Size = 2147483647;
-            param.IsNullable = true;
-            param.SourceColumn = "CustomerName";
-            this._commandCollection[2].Parameters.Add(param);
-            this._commandCollection[3] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote\r\nWHERE " +
-                "QuoteID = @QuoteID\r\n";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@QuoteID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "QuoteID";
-            this._commandCollection[3].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(quotesDataSet2.quoteDataTable dataTable) {
+        public virtual int Fill(sql5125420DataSet.quotesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1160,9 +1124,9 @@ namespace Form2.quotesDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual quotesDataSet2.quoteDataTable GetData() {
+        public virtual sql5125420DataSet.quotesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            quotesDataSet2.quoteDataTable dataTable = new quotesDataSet2.quoteDataTable();
+            sql5125420DataSet.quotesDataTable dataTable = new sql5125420DataSet.quotesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1170,62 +1134,15 @@ namespace Form2.quotesDataSet2TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(quotesDataSet2.quoteDataTable dataTable, int QuoteID) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(QuoteID));
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByName(quotesDataSet2.quoteDataTable dataTable, string CustomerName) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((CustomerName == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CustomerName));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Search(quotesDataSet2.quoteDataTable dataTable, int QuoteID) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(QuoteID));
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(quotesDataSet2.quoteDataTable dataTable) {
+        public virtual int Update(sql5125420DataSet.quotesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(quotesDataSet2 dataSet) {
-            return this.Adapter.Update(dataSet, "quote");
+        public virtual int Update(sql5125420DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "quotes");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1247,7 +1164,7 @@ namespace Form2.quotesDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int p1, global::System.Nullable<double> p3, string p5, global::System.Nullable<ulong> p7) {
+        public virtual int Delete(int p1, global::System.Nullable<double> p3, string p5, global::System.Nullable<int> p7) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p1));
             if ((p3.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -1267,7 +1184,7 @@ namespace Form2.quotesDataSet2TableAdapters {
             }
             if ((p7.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((ulong)(p7.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(p7.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -1293,7 +1210,7 @@ namespace Form2.quotesDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int p1, string p2, global::System.Nullable<double> p3, string p4, global::System.Nullable<ulong> p5) {
+        public virtual int Insert(int p1, string p2, global::System.Nullable<double> p3, string p4, global::System.Nullable<int> p5) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1314,7 +1231,7 @@ namespace Form2.quotesDataSet2TableAdapters {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p4));
             }
             if ((p5.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((ulong)(p5.Value));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(p5.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -1339,7 +1256,7 @@ namespace Form2.quotesDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int p1, string p2, global::System.Nullable<double> p3, string p4, global::System.Nullable<ulong> p5, int p6, global::System.Nullable<double> p8, string p10, global::System.Nullable<ulong> p12) {
+        public virtual int Update(int p1, string p2, global::System.Nullable<double> p3, string p4, global::System.Nullable<int> p5, int p6, global::System.Nullable<double> p8, string p10, global::System.Nullable<int> p12) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1360,7 +1277,7 @@ namespace Form2.quotesDataSet2TableAdapters {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
             }
             if ((p5.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((ulong)(p5.Value));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(p5.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -1384,7 +1301,7 @@ namespace Form2.quotesDataSet2TableAdapters {
             }
             if ((p12.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((ulong)(p12.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(p12.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
@@ -1410,7 +1327,7 @@ namespace Form2.quotesDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p2, global::System.Nullable<double> p3, string p4, global::System.Nullable<ulong> p5, int p6, global::System.Nullable<double> p8, string p10, global::System.Nullable<ulong> p12) {
+        public virtual int Update(string p2, global::System.Nullable<double> p3, string p4, global::System.Nullable<int> p5, int p6, global::System.Nullable<double> p8, string p10, global::System.Nullable<int> p12) {
             return this.Update(p6, p2, p3, p4, p5, p6, p8, p10, p12);
         }
     }
@@ -1427,7 +1344,7 @@ namespace Form2.quotesDataSet2TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private quoteTableAdapter _quoteTableAdapter;
+        private quotesTableAdapter _quotesTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1449,12 +1366,12 @@ namespace Form2.quotesDataSet2TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public quoteTableAdapter quoteTableAdapter {
+        public quotesTableAdapter quotesTableAdapter {
             get {
-                return this._quoteTableAdapter;
+                return this._quotesTableAdapter;
             }
             set {
-                this._quoteTableAdapter = value;
+                this._quotesTableAdapter = value;
             }
         }
         
@@ -1477,9 +1394,9 @@ namespace Form2.quotesDataSet2TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._quoteTableAdapter != null) 
-                            && (this._quoteTableAdapter.Connection != null))) {
-                    return this._quoteTableAdapter.Connection;
+                if (((this._quotesTableAdapter != null) 
+                            && (this._quotesTableAdapter.Connection != null))) {
+                    return this._quotesTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1494,7 +1411,7 @@ namespace Form2.quotesDataSet2TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._quoteTableAdapter != null)) {
+                if ((this._quotesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1506,14 +1423,14 @@ namespace Form2.quotesDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(quotesDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(sql5125420DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._quoteTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.quote.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._quotesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.quotes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._quoteTableAdapter.Update(updatedRows));
+                    result = (result + this._quotesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1525,13 +1442,13 @@ namespace Form2.quotesDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(quotesDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(sql5125420DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._quoteTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.quote.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._quotesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.quotes.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._quoteTableAdapter.Update(addedRows));
+                    result = (result + this._quotesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1543,13 +1460,13 @@ namespace Form2.quotesDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(quotesDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(sql5125420DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._quoteTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.quote.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._quotesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.quotes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._quoteTableAdapter.Update(deletedRows));
+                    result = (result + this._quotesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1585,15 +1502,15 @@ namespace Form2.quotesDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(quotesDataSet2 dataSet) {
+        public virtual int UpdateAll(sql5125420DataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._quoteTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._quoteTableAdapter.Connection) == false))) {
+            if (((this._quotesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._quotesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1629,13 +1546,13 @@ namespace Form2.quotesDataSet2TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._quoteTableAdapter != null)) {
-                    revertConnections.Add(this._quoteTableAdapter, this._quoteTableAdapter.Connection);
-                    this._quoteTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._quoteTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._quoteTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._quoteTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._quoteTableAdapter.Adapter);
+                if ((this._quotesTableAdapter != null)) {
+                    revertConnections.Add(this._quotesTableAdapter, this._quotesTableAdapter.Connection);
+                    this._quotesTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._quotesTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._quotesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._quotesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._quotesTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1696,9 +1613,9 @@ namespace Form2.quotesDataSet2TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._quoteTableAdapter != null)) {
-                    this._quoteTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._quoteTableAdapter]));
-                    this._quoteTableAdapter.Transaction = null;
+                if ((this._quotesTableAdapter != null)) {
+                    this._quotesTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._quotesTableAdapter]));
+                    this._quotesTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

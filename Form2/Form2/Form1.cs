@@ -14,7 +14,7 @@ namespace Form2
     public partial class Form1 : Form
     {
 
-        string connectionString = "Server=localhost; Database=quotes; user id=root; Password=root;";
+        string connectionString = "server=sql5.freemysqlhosting.net; database=sql5125420; uid=sql5125420; pwd=CuPC68fUR7;";
         public Form1()
         {
             InitializeComponent();
@@ -22,10 +22,14 @@ namespace Form2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quotesDataSet2.quote' table. You can move, or remove it, as needed.
-            //this.quoteTableAdapter1.Fill(this.quotesDataSet2.quote);
-            // TODO: This line of code loads data into the 'customersDataSet.customers' table. You can move, or remove it, as needed.
 
+            // TODO: This line of code loads data into the 'sql5125420DataSet.quotes' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'quotesDataSet.quote' table. You can move, or remove it, as needed.       
+            // TODO: This line of code loads data into the 'quotesDataSet2.quote' table. You can move, or remove it, as needed.
+            //this.quoteTableAdapter.Fill(this.quotesDataSet2.quote);
+            // TODO: This line of code loads data into the 'customersDataSet.customers' table. You can move, or remove it, as needed.
+            //SqlConnection connection = new SqlConnection(connectionString);
+            //connection.Open();
 
         }
 
@@ -46,76 +50,26 @@ namespace Form2
         }
 
 
-
-        private void searchToolStripButton_Click(object sender, EventArgs e)
+        private void refreshQuoteButton_Click(object sender, EventArgs e)
         {
             try
             {
-                this.quoteTableAdapter1.Search(this.quotesDataSet2.quote, ((int)(System.Convert.ChangeType(quoteIDToolStripTextBox.Text, typeof(int)))));
+                this.quotesTableAdapter.Fill(this.sql5125420DataSet.quotes);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show("Can not open connection! ");
             }
-
-        }
-
-        private void refreshQuoteButton_Click(object sender, EventArgs e)
-        {
-            this.quoteTableAdapter1.Fill(this.quotesDataSet2.quote);
         }
 
         private void retrieveQuoteButton_Click(object sender, EventArgs e)
         {
-            int quoteNumber;
+            //int quoteNumber;
             // string queryString = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote WHERE QuoteID = '"+quoteIDtextbox.Text+"';";
 
             if (quoteIDtextbox.Text != "")
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    try
-                    {
-                        //get number from second panel
-                        quoteNumber = Convert.ToInt32(quoteIDtextbox.Text);
-
-                        string queryString = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote WHERE QuoteID = '" + quoteIDtextbox.Text + "';";
-
-                        ////show new panel
-                        //quoteRetrievePanel.Visible = true;
-                        //quoteMainPanel.Visible = false;
-
-                        //display quote id
-                        QuoteIDDisplay.Text = quoteNumber.ToString();
-
-                        //open MySQL connection
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(queryString, connection);
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        if (reader.Read())
-                        {
-                            custNameDisplay.Text = reader.GetString(2);
-                            priceDisplay.Text = reader.GetString(3);
-                            commentDisplay.Text = reader.GetString(4);
-                        }
-
-                        else
-                        {
-                            MessageBox.Show("NO DATA");
-                        }
-                    }
-                    catch (System.Exception ex)
-                    {
-                        System.Windows.Forms.MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        //show new panel
-                        quoteRetrievePanel.Visible = true;
-                        quoteMainPanel.Visible = false;
-                    }
-                }
+                retrieveDataFill();
             }
             else
             {
@@ -129,5 +83,18 @@ namespace Form2
             quoteMainPanel.Visible = true;
             quoteRetrievePanel.Visible = false;
         }
+
+        private void custNameDisplay_TextChanged(object sender, EventArgs e)
+        {
+            textChangeEvent(modifyQuoteButton, custNameDisplay);
+        }
+
+        private void quoteIDtextbox_TextChanged(object sender, EventArgs e)
+        {
+            textChangeEvent(retrieveQuoteButton, quoteIDtextbox);
+            textChangeEvent(deleteQuoteButton, quoteIDtextbox);
+        }
+
+
     }
 }
