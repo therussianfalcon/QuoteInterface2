@@ -48,8 +48,8 @@
             this.quoteIDtextbox = new System.Windows.Forms.TextBox();
             this.retrieveQuoteButton = new System.Windows.Forms.Button();
             this.quoteRetrievePanel = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.sanctionedCheckbox = new System.Windows.Forms.CheckBox();
+            this.unresolvedCheckbox = new System.Windows.Forms.CheckBox();
             this.quoteDisplayRefresh = new System.Windows.Forms.Button();
             this.priceDetailButton = new System.Windows.Forms.Button();
             this.modifyQuoteButton = new System.Windows.Forms.Button();
@@ -244,8 +244,8 @@
             // 
             this.quoteRetrievePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quoteRetrievePanel.BackgroundImage")));
             this.quoteRetrievePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.quoteRetrievePanel.Controls.Add(this.checkBox2);
-            this.quoteRetrievePanel.Controls.Add(this.checkBox1);
+            this.quoteRetrievePanel.Controls.Add(this.sanctionedCheckbox);
+            this.quoteRetrievePanel.Controls.Add(this.unresolvedCheckbox);
             this.quoteRetrievePanel.Controls.Add(this.quoteDisplayRefresh);
             this.quoteRetrievePanel.Controls.Add(this.priceDetailButton);
             this.quoteRetrievePanel.Controls.Add(this.modifyQuoteButton);
@@ -265,27 +265,29 @@
             this.quoteRetrievePanel.TabIndex = 7;
             this.quoteRetrievePanel.Visible = false;
             // 
-            // checkBox2
+            // sanctionedCheckbox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(382, 52);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "Sanctioned";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.sanctionedCheckbox.AutoSize = true;
+            this.sanctionedCheckbox.BackColor = System.Drawing.Color.White;
+            this.sanctionedCheckbox.Location = new System.Drawing.Point(382, 52);
+            this.sanctionedCheckbox.Name = "sanctionedCheckbox";
+            this.sanctionedCheckbox.Size = new System.Drawing.Size(80, 17);
+            this.sanctionedCheckbox.TabIndex = 5;
+            this.sanctionedCheckbox.Text = "Sanctioned";
+            this.sanctionedCheckbox.UseVisualStyleBackColor = false;
+            this.sanctionedCheckbox.Click += new System.EventHandler(this.sanctionedCheckbox_Click);
             // 
-            // checkBox1
+            // unresolvedCheckbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(382, 29);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Unresolved";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.unresolvedCheckbox.AutoSize = true;
+            this.unresolvedCheckbox.BackColor = System.Drawing.Color.White;
+            this.unresolvedCheckbox.Location = new System.Drawing.Point(382, 29);
+            this.unresolvedCheckbox.Name = "unresolvedCheckbox";
+            this.unresolvedCheckbox.Size = new System.Drawing.Size(80, 17);
+            this.unresolvedCheckbox.TabIndex = 5;
+            this.unresolvedCheckbox.Text = "Unresolved";
+            this.unresolvedCheckbox.UseVisualStyleBackColor = false;
+            this.unresolvedCheckbox.Click += new System.EventHandler(this.unresolvedCheckbox_Click);
             // 
             // quoteDisplayRefresh
             // 
@@ -446,8 +448,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(575, 407);
-            this.Controls.Add(this.quoteMainPanel);
             this.Controls.Add(this.quoteRetrievePanel);
+            this.Controls.Add(this.quoteMainPanel);
             this.Controls.Add(this.retrieveButton);
             this.Controls.Add(this.purchButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -492,8 +494,8 @@
         private System.Windows.Forms.TextBox custNameDisplay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox commentDisplay;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox unresolvedCheckbox;
+        private System.Windows.Forms.CheckBox sanctionedCheckbox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private sql5125420DataSet1 sql5125420DataSet1;
         private System.Windows.Forms.BindingSource quotesBindingSource;

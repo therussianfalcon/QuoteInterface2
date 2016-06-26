@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,6 +21,16 @@ namespace Form2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //MySqlConnection connection = new MySqlConnection("server=sql5.freemysqlhosting.net;database=sql5125420;uid=sql5125420;pwd=CuPC68fUR7;");
+            //try
+            //{
+            //    connection.Open();
+            //    MessageBox.Show("success");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Can not open connection!");
+            //}
             // TODO: This line of code loads data into the 'sql5125420DataSet1.quotes' table. You can move, or remove it, as needed.
 
             // TODO: This line of code loads data into the 'sql5125420DataSet.quotes' table. You can move, or remove it, as needed.
@@ -89,6 +99,9 @@ namespace Form2
         {
             quoteMainPanel.Visible = true;
             quoteRetrievePanel.Visible = false;
+            custNameDisplay.Text = "";
+            priceDisplay.Text = "";
+            commentDisplay.Text = "";
         }
 
         private void custNameDisplay_TextChanged(object sender, EventArgs e)
@@ -113,6 +126,18 @@ namespace Form2
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void unresolvedCheckbox_Click(object sender, EventArgs e)
+        {
+            unresolvedCheckbox.Checked = true;
+            sanctionedCheckbox.Checked = false;
+        }
+
+        private void sanctionedCheckbox_Click(object sender, EventArgs e)
+        {
+            unresolvedCheckbox.Checked = false;
+            sanctionedCheckbox.Checked = true;
         }
     }
 }

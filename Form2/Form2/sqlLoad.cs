@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,58 +17,79 @@ namespace Form2
         string connectionString = "server=sql5.freemysqlhosting.net;database=sql5125420;uid=sql5125420;pwd=CuPC68fUR7;";
         public void retrieveDataFill() {
             int quoteNumber;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            MySqlConnection conn = new MySqlConnection("server=sql5.freemysqlhosting.net;database=sql5125420;uid=sql5125420;pwd=CuPC68fUR7;");
+            try
             {
+                conn.Open();
+                MessageBox.Show("Successfully established connection!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection!");
+            }
+            try
+            {
+                //get number from second panel
+                quoteNumber = Convert.ToInt32(quoteIDtextbox.Text);
+
+                string sql = "SELECT * FROM quotes WHERE QuoteID = '" + quoteIDtextbox.Text + "';";
+                //string sql = "SELECT * FROM quotes WHERE QuoteID = '1';";
+                ////show new panel
+                //quoteRetrievePanel.Visible = true;
+                //quoteMainPanel.Visible = false;
+
+                //display quote id
+                QuoteIDDisplay.Text = quoteNumber.ToString();
+
+                //open MySQL connection
                 try
                 {
-                    //get number from second panel
-                    quoteNumber = Convert.ToInt32(quoteIDtextbox.Text);
+                    //connection.Open();
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    string queryString = "SELECT QuoteID, CustomerName, TotalPrice, Comment, QuoteStatus FROM quote WHERE QuoteID = '" + quoteIDtextbox.Text + "';";
+                    //**************error with this command
+                    MySqlDataReader rdr = cmd.ExecuteReader();
 
-                    ////show new panel
-                    //quoteRetrievePanel.Visible = true;
-                    //quoteMainPanel.Visible = false;
 
-                    //display quote id
-                    QuoteIDDisplay.Text = quoteNumber.ToString();
-
-                    //open MySQL connection
-                    try
+                    if (rdr.Read())
                     {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(queryString, connection);
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        if (reader.Read())
+                        custNameDisplay.Text = rdr.GetString(1);
+                        priceDisplay.Text = rdr.GetString(2);
+                        commentDisplay.Text = rdr.GetString(3);
+                        int status = rdr.GetInt32(4);
+                        if(status ==0)
                         {
-                            custNameDisplay.Text = reader.GetString(2);
-                            priceDisplay.Text = reader.GetString(3);
-                            commentDisplay.Text = reader.GetString(4);
+                            unresolvedCheckbox.Checked = true;
                         }
-
-                        else
+                        else if (status >= 0)
                         {
-                            MessageBox.Show("NO DATA");
+                            unresolvedCheckbox.Checked = false;
+                            sanctionedCheckbox.Checked = true;
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Can not open connection ! ");
-                    }
 
+                    else
+                    {
+                        MessageBox.Show("NO DATA");
+                    }
                 }
-                catch (System.Exception ex)
+                catch (Exception ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    MessageBox.Show("Reader Failure");
                 }
-                finally
-                {
-                    //show new panel
-                    quoteRetrievePanel.Visible = true;
-                    quoteMainPanel.Visible = false;
-                }
+
             }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //show new panel
+                quoteRetrievePanel.Visible = true;
+                quoteMainPanel.Visible = false;
+            }
+
         }
         public void textChangeEvent(Button button, TextBox textbox)
         {
