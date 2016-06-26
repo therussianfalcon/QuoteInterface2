@@ -109,6 +109,7 @@
             // quoteMainPanel
             // 
             this.quoteMainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quoteMainPanel.BackgroundImage")));
+            this.quoteMainPanel.Controls.Add(this.searchToolStrip);
             this.quoteMainPanel.Controls.Add(this.dataGridView1);
             this.quoteMainPanel.Controls.Add(this.refreshQuoteButton);
             this.quoteMainPanel.Controls.Add(this.deleteQuoteButton);
@@ -445,7 +446,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(575, 407);
-            this.Controls.Add(this.searchToolStrip);
             this.Controls.Add(this.quoteMainPanel);
             this.Controls.Add(this.quoteRetrievePanel);
             this.Controls.Add(this.retrieveButton);
@@ -466,7 +466,6 @@
             this.searchToolStrip.ResumeLayout(false);
             this.searchToolStrip.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

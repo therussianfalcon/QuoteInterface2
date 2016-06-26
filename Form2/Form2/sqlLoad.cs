@@ -13,6 +13,7 @@ namespace Form2
 {
     public partial class Form1 : Form
     {
+    
         string connectionString = "server=sql5.freemysqlhosting.net;database=sql5125420;uid=sql5125420;pwd=CuPC68fUR7;";
         public void retrieveDataFill() {
             int quoteNumber;
