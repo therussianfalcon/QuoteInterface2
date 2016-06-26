@@ -86,7 +86,7 @@ namespace Form2
 
             if (quoteIDtextbox.Text != "")
             {
-                retrieveDataFill();
+                retrieveDataFill(quoteIDtextbox);
             }
             else
             {
@@ -138,6 +138,34 @@ namespace Form2
         {
             unresolvedCheckbox.Checked = false;
             sanctionedCheckbox.Checked = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text != "")
+            {
+                double discountPercent = Convert.ToDouble(comboBox1.Text);
+                double basePrice = Convert.ToDouble(priceDisplay.Text);
+                discountPercent = 1 - (discountPercent / 100);
+                actualPrice = basePrice * discountPercent;
+                priceDisplay2.Text = actualPrice.ToString();
+
+                confirmDiscountButton.Enabled = true;
+            }
+
+        }
+
+        double actualPrice;
+        private void confirmDiscountButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Text = null;
+            discountApply(actualPrice);
+            retrieveDataFill(QuoteIDDisplay);
+        }
+
+        private void quoteDisplayRefresh_Click(object sender, EventArgs e)
+        {
+            retrieveDataFill(QuoteIDDisplay);
         }
     }
 }

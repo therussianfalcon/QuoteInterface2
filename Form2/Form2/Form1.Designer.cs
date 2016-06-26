@@ -67,6 +67,12 @@
             this.custNameDisplay = new System.Windows.Forms.TextBox();
             this.QuoteIDDisplay = new System.Windows.Forms.TextBox();
             this.quotesTableAdapter = new Form2.sql5125420DataSet1TableAdapters.quotesTableAdapter();
+            this.lineItemPanel = new System.Windows.Forms.Panel();
+            this.priceDisplay2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.confirmDiscountButton = new System.Windows.Forms.Button();
             this.quoteMainPanel.SuspendLayout();
             this.searchToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -276,17 +282,22 @@
             // 
             this.quoteRetrievePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quoteRetrievePanel.BackgroundImage")));
             this.quoteRetrievePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.quoteRetrievePanel.Controls.Add(this.comboBox1);
             this.quoteRetrievePanel.Controls.Add(this.sanctionedCheckbox);
             this.quoteRetrievePanel.Controls.Add(this.unresolvedCheckbox);
             this.quoteRetrievePanel.Controls.Add(this.quoteDisplayRefresh);
+            this.quoteRetrievePanel.Controls.Add(this.confirmDiscountButton);
             this.quoteRetrievePanel.Controls.Add(this.priceDetailButton);
             this.quoteRetrievePanel.Controls.Add(this.modifyQuoteButton);
             this.quoteRetrievePanel.Controls.Add(this.quoteRetrievalReturnButton);
             this.quoteRetrievePanel.Controls.Add(this.label5);
+            this.quoteRetrievePanel.Controls.Add(this.label7);
+            this.quoteRetrievePanel.Controls.Add(this.label6);
             this.quoteRetrievePanel.Controls.Add(this.label4);
             this.quoteRetrievePanel.Controls.Add(this.label3);
             this.quoteRetrievePanel.Controls.Add(this.label2);
             this.quoteRetrievePanel.Controls.Add(this.commentDisplay);
+            this.quoteRetrievePanel.Controls.Add(this.priceDisplay2);
             this.quoteRetrievePanel.Controls.Add(this.priceDisplay);
             this.quoteRetrievePanel.Controls.Add(this.custNameDisplay);
             this.quoteRetrievePanel.Controls.Add(this.QuoteIDDisplay);
@@ -329,6 +340,7 @@
             this.quoteDisplayRefresh.TabIndex = 4;
             this.quoteDisplayRefresh.Text = "Refresh";
             this.quoteDisplayRefresh.UseVisualStyleBackColor = true;
+            this.quoteDisplayRefresh.Click += new System.EventHandler(this.quoteDisplayRefresh_Click);
             // 
             // priceDetailButton
             // 
@@ -364,7 +376,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 104);
+            this.label5.Location = new System.Drawing.Point(66, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 1;
@@ -375,11 +387,11 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(61, 78);
+            this.label4.Location = new System.Drawing.Point(51, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 20);
+            this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Total Price";
+            this.label4.Text = "Actual Price";
             // 
             // label3
             // 
@@ -405,7 +417,7 @@
             // 
             // commentDisplay
             // 
-            this.commentDisplay.Location = new System.Drawing.Point(152, 106);
+            this.commentDisplay.Location = new System.Drawing.Point(152, 135);
             this.commentDisplay.Multiline = true;
             this.commentDisplay.Name = "commentDisplay";
             this.commentDisplay.Size = new System.Drawing.Size(322, 136);
@@ -415,6 +427,7 @@
             // 
             this.priceDisplay.Location = new System.Drawing.Point(152, 80);
             this.priceDisplay.Name = "priceDisplay";
+            this.priceDisplay.ReadOnly = true;
             this.priceDisplay.Size = new System.Drawing.Size(123, 20);
             this.priceDisplay.TabIndex = 0;
             this.priceDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -441,6 +454,83 @@
             // 
             this.quotesTableAdapter.ClearBeforeFill = true;
             // 
+            // lineItemPanel
+            // 
+            this.lineItemPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lineItemPanel.BackgroundImage")));
+            this.lineItemPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lineItemPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lineItemPanel.Location = new System.Drawing.Point(0, 0);
+            this.lineItemPanel.Name = "lineItemPanel";
+            this.lineItemPanel.Size = new System.Drawing.Size(575, 407);
+            this.lineItemPanel.TabIndex = 6;
+            this.lineItemPanel.Visible = false;
+            // 
+            // priceDisplay2
+            // 
+            this.priceDisplay2.Location = new System.Drawing.Point(152, 106);
+            this.priceDisplay2.Name = "priceDisplay2";
+            this.priceDisplay2.ReadOnly = true;
+            this.priceDisplay2.Size = new System.Drawing.Size(123, 20);
+            this.priceDisplay2.TabIndex = 0;
+            this.priceDisplay2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(59, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Base Price";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.comboBox1.Location = new System.Drawing.Point(289, 79);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(60, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(281, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 16);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "% Discount";
+            // 
+            // confirmDiscountButton
+            // 
+            this.confirmDiscountButton.Enabled = false;
+            this.confirmDiscountButton.Location = new System.Drawing.Point(281, 106);
+            this.confirmDiscountButton.Name = "confirmDiscountButton";
+            this.confirmDiscountButton.Size = new System.Drawing.Size(75, 23);
+            this.confirmDiscountButton.TabIndex = 4;
+            this.confirmDiscountButton.Text = "Confirm ";
+            this.confirmDiscountButton.UseVisualStyleBackColor = true;
+            this.confirmDiscountButton.Click += new System.EventHandler(this.confirmDiscountButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,6 +540,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(575, 407);
             this.Controls.Add(this.quoteRetrievePanel);
+            this.Controls.Add(this.lineItemPanel);
             this.Controls.Add(this.quoteMainPanel);
             this.Controls.Add(this.retrieveButton);
             this.Controls.Add(this.purchButton);
@@ -510,6 +601,12 @@
         private System.Windows.Forms.ToolStripLabel quoteIDToolStripLabel;
         private System.Windows.Forms.ToolStripTextBox quoteIDToolStripTextBox;
         private System.Windows.Forms.ToolStripButton searchToolStripButton;
+        private System.Windows.Forms.Panel lineItemPanel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox priceDisplay2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button confirmDiscountButton;
     }
 }
 

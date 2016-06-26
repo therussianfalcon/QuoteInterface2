@@ -15,7 +15,7 @@ namespace Form2
     {
     
         string connectionString = "server=sql5.freemysqlhosting.net;database=sql5125420;uid=sql5125420;pwd=CuPC68fUR7;";
-        public void retrieveDataFill() {
+        public void retrieveDataFill(TextBox id) {
             int quoteNumber;
             MySqlConnection conn = new MySqlConnection("server=sql5.freemysqlhosting.net;database=sql5125420;uid=sql5125420;pwd=CuPC68fUR7;");
             try
@@ -30,9 +30,9 @@ namespace Form2
             try
             {
                 //get number from second panel
-                quoteNumber = Convert.ToInt32(quoteIDtextbox.Text);
+                quoteNumber = Convert.ToInt32(id.Text);
 
-                string sql = "SELECT * FROM quotes WHERE QuoteID = '" + quoteIDtextbox.Text + "';";
+                string sql = "SELECT * FROM quotes WHERE QuoteID = '" + id.Text + "';";
                 //string sql = "SELECT * FROM quotes WHERE QuoteID = '1';";
                 ////show new panel
                 //quoteRetrievePanel.Visible = true;
@@ -55,8 +55,9 @@ namespace Form2
                     {
                         custNameDisplay.Text = rdr.GetString(1);
                         priceDisplay.Text = rdr.GetString(2);
-                        commentDisplay.Text = rdr.GetString(3);
-                        int status = rdr.GetInt32(4);
+                        priceDisplay2.Text = rdr.GetString(3);
+                        commentDisplay.Text = rdr.GetString(4);
+                        int status = rdr.GetInt32(5);
                         if(status ==0)
                         {
                             unresolvedCheckbox.Checked = true;
@@ -85,10 +86,16 @@ namespace Form2
             }
             finally
             {
+                //close connection to server
+                conn.Close();
                 //show new panel
                 quoteRetrievePanel.Visible = true;
                 quoteMainPanel.Visible = false;
             }
+
+        }
+        public void discountApply(double actualPrice)
+        {
 
         }
         public void textChangeEvent(Button button, TextBox textbox)
