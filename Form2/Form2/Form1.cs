@@ -159,7 +159,8 @@ namespace Form2
         private void confirmDiscountButton_Click(object sender, EventArgs e)
         {
             comboBox1.Text = null;
-            discountApply(actualPrice);
+            confirmDiscountButton.Enabled = false;
+            discountApply(actualPrice, QuoteIDDisplay);
             retrieveDataFill(QuoteIDDisplay);
         }
 

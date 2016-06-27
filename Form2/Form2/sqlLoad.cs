@@ -21,12 +21,12 @@ namespace Form2
             try
             {
                 conn.Open();
-                MessageBox.Show("Successfully established connection!");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Can not open connection!");
             }
+
             try
             {
                 //get number from second panel
@@ -94,9 +94,27 @@ namespace Form2
             }
 
         }
-        public void discountApply(double actualPrice)
+        public void discountApply(double actualPrice, TextBox id)
         {
+            //create instance of connection
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            string sql = "update sql5125420.quotes set TotalPrice='" + actualPrice.ToString() + "' where QuoteID='" + id.Text + "';";
 
+            //attempt to open connection with sql server
+            try
+            {
+                conn.Open();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection!");
+            }
+
+            //create command
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            //exectue query
+            MySqlDataReader rdr = cmd.ExecuteReader();
         }
         public void textChangeEvent(Button button, TextBox textbox)
         {
